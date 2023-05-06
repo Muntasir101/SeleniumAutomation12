@@ -34,6 +34,7 @@ def TC_001_login_valid():
     login_button.click()
     time.sleep(3)
 
+
     # Verify valid Login by URL
     expected_url = 'https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index'
     actual_url = driver.current_url
