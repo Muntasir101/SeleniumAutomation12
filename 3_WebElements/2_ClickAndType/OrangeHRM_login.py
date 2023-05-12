@@ -93,5 +93,5 @@ def TC_002_login_invalid():
     driver.close()
 
 
-# TC_001_login_valid()
-TC_002_login_invalid()
+TC_001_login_valid()
+#TC_002_login_invalid()

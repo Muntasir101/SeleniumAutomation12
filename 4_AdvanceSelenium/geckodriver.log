@@ -494,3 +494,5 @@ WebDriver BiDi listening on ws://127.0.0.1:65147
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Asus\\AppData\\Local\\Temp\\rust_mozprofileKnyim7\\search.json.mozlz4", (void 0)))
 [ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
 DevTools listening on ws://127.0.0.1:65147/devtools/browser/13e4a7ac-b0c2-4ce6-93f5-15fedaa06e37
+1683385606772	Marionette	INFO	Stopped listening on port 65154
+Dynamically enable window occlusion 1

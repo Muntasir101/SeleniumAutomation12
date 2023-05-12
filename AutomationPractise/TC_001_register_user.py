@@ -60,7 +60,7 @@ name_field.clear()
 name_field.send_keys("Test Name")
 
 email_field.clear()
-email_field.send_keys("test@mail.com")
+email_field.send_keys("test12@mail.com")
 
 # Step 7 Click 'Signup' button
 signup_button  = WebDriverWait(driver, 10).until(
@@ -69,10 +69,31 @@ signup_button  = WebDriverWait(driver, 10).until(
 signup_button.click()
 
 # Step 8 Verify that 'ENTER ACCOUNT INFORMATION' is visible
+expected_text= "ENTER ACCOUNT INFORMATION"
+
+actual_text = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.CSS_SELECTOR, ".login-form > .text-center.title > b")))
+actual_text_message= actual_text.text
+
+try:
+    assert expected_text == actual_text_message
+    print("Verify 'ENTER ACCOUNT INFORMATION' is visible.Test Passed.")
+except AssertionError:
+    print("Verify 'ENTER ACCOUNT INFORMATION' is not visible.Test Failed.")
+
+
 # STep 9 Fill details: Title, Name, Email, Password, Date of birth
+title = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.ID, "id_gender1")))
+title.click()
+
+password = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.ID, "password")))
+password.send_keys("123456")
+
 #Setp 10 Select checkbox 'Sign up for our newsletter!'
 #Step 11 Select checkbox 'Receive special offers from our partners!'
-# Step 12 Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number
+#Step 12 Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number
 #Step 13 Click 'Create Account button'
 #Step 14 Verify that 'ACCOUNT CREATED!' is visible
 #Step 15 Click 'Continue' button
