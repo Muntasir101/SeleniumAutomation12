@@ -8,11 +8,11 @@ from Framework.utils import excel_utils
 class LoginTest(unittest.TestCase):
 
     def test_login_001(self):
-        driver = webdriver.Firefox()
+        driver = webdriver.Chrome()
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
         time.sleep(8)
 
-        file = "E:\\Offline_Batch_12\\Project\\SeleniumAutomation12\\Framework\\data\\test_data.xlsx"
+        file = "..\\Framework\\data\\test_data.xlsx"
         sheet = "Sheet1"
 
         number_of_rows = excel_utils.get_row_count(file, sheet)
